@@ -24,6 +24,8 @@ public class Bouton extends Affichable{
 	
 	@Override
 	public void afficher(Batch b){
+		
+		
 		super.afficher(b);
 		font.draw(b,text, (posX+lX/2), (posY+lY/2));
 	}

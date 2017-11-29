@@ -11,7 +11,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Jeu extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
-	Bouton b;
+	Bouton btn1;
 	BitmapFont font;
 	
 	@Override
@@ -23,8 +23,10 @@ public class Jeu extends ApplicationAdapter {
 		font = new BitmapFont();
 		font.setColor(Color.BLUE);
 		
-			
-		b=new Bouton(img, 300, 300, 50, 200, "Test", font);
+		InFenDebug.init();	
+		
+		
+		btn1=new Bouton(img, 300, 300, 50, 200, "Test", font);
 		
 	}
 
@@ -38,12 +40,15 @@ public class Jeu extends ApplicationAdapter {
 				
 		//batch.draw(img, 0, 0);
 		
-		b.afficher(batch);
+		btn1.afficher(batch);//
 		
+		
+		InFenDebug.afficher(batch);
 		//Fin des affichage
 		batch.end();
 		
-		
+		btn1.angle+=1;
+		InFenDebug.println(Integer.toString(btn1.angle));
 		
 	}
 	
