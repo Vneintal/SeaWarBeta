@@ -20,7 +20,7 @@ public class InFenDebug {
 	public static void init(){
 		font.setColor(Color.GREEN);
 		barre=new Affichable(Textures.WIMG, 0, 200, Gdx.graphics.getWidth(), 5,0);
-		//barre.setColor(0, 1, 0, 1);
+		barre.setColor(0, 1, 0, 1);
 	}
 	
 	public static void println(String s){
