@@ -15,8 +15,8 @@ public class DesktopLauncher {
 		//Configuration de la fenetre
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		
-		config.height=400;
-		config.width=600;
+		config.height=800;
+		config.width=1200;
 		
 		config.title="Sea-War";
 		

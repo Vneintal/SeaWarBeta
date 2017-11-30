@@ -23,11 +23,17 @@ public class Bouton extends Affichable{
 	}
 	
 	@Override
-	public void afficher(Batch b){
+	public boolean afficher(Batch b){
 		
 		
 		super.afficher(b);
-		font.draw(b,text, (posX+lX/2), (posY+lY/2));
+		try {
+			font.draw(b,text, (posX+lX/2), (posY+lY/2));
+			return true;
+		} catch (Exception e) {
+			return false;
+
+		}
 	}
 	
 	
