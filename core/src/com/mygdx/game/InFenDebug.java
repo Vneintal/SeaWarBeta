@@ -3,7 +3,10 @@ package com.mygdx.game;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
-
+/**
+ * 
+ * Classe permetant d'afficher des messages a l'ecran (pour debugage uniquement )
+ * */
 public class InFenDebug {
 
 	public static BitmapFont font=new BitmapFont();

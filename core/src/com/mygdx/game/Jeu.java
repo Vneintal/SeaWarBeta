@@ -8,6 +8,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+
+/**Classe s'occupant du rendu*/
+
 public class Jeu extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;

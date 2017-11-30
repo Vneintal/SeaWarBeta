@@ -6,6 +6,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
+/**
+ * 
+ * Classe des objets affichable a l'ecran
+ * 
+ * */
+
 public class Affichable implements Serializable{
 
 	
@@ -18,12 +24,25 @@ public class Affichable implements Serializable{
 	protected int lY;
 	protected int angle;
 	
-	public Affichable(Texture img,int x,int y,double angle){
+
+	
+	public Affichable(Texture img,int x,int y){
 		this.img=img;
 		this.posX=x;
 		this.posY=y;
-		this.lX=1;
-		this.lY=1;
+		this.lX=10;
+		this.lY=10;
+		this.angle=0;
+
+	}
+	
+	public Affichable(Texture img,int x,int y,int angle){
+		this.img=img;
+		this.posX=x;
+		this.posY=y;
+		this.lX=10;
+		this.lY=10;
+		this.angle=angle;
 		
 		
 	}
