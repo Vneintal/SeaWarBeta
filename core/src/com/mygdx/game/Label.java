@@ -1,40 +1,47 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
-/**Classe des boutons*/
-public class Bouton extends Affichable{
+/**
+ * 
+ * Affiche un simple text a l'ecran
+ * 
+ * */
+
+
+public class Label extends Affichable{
+
 	
+	
+
 	String text;
 	BitmapFont font;
 	
 	private static final long serialVersionUID = 1L;
 
 
-	public Bouton(Texture img, int px, int py,int lx,int ly,String text,BitmapFont font) {
-		super(img, px, py,0);
-		this.lX=lx;
-		this.lY=ly;
+	public Label(int px, int py,String text,BitmapFont font) {
+		super(null, px, py);
 		
 		this.text=text;
 		this.font=font;
 	}
 	
+
+	
+	public void setText(String txt){
+		this.text=txt;
+	}
+	
 	@Override
 	public boolean afficher(Batch b){
-		
-		
-		super.afficher(b);
 		try {
-			font.draw(b,text, (posX+lX/2), (posY+lY/2));
+			font.draw(b,text, posX, posY);
 			return true;
 		} catch (Exception e) {
 			return false;
 
 		}
 	}
-	
-	
 }
