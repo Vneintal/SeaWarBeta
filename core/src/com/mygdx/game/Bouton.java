@@ -9,14 +9,13 @@ public class Bouton extends Affichable{
 	
 	String text;
 	BitmapFont font;
-	
 	private static final long serialVersionUID = 1L;
 
 
 	public Bouton(Texture img, int px, int py,int lx,int ly,String text,BitmapFont font) {
 		super(img, px, py,0);
-		this.lX=lx;
-		this.lY=ly;
+		this.lY=lx;
+		this.lX=ly;
 		
 		this.text=text;
 		this.font=font;
@@ -28,13 +27,33 @@ public class Bouton extends Affichable{
 		
 		super.afficher(b);
 		try {
-			font.draw(b,text, (posX+lX/2), (posY+lY/2));
+			font.draw(b,text, (posY+lY/2), (posX+lX/2));
 			return true;
 		} catch (Exception e) {
 			return false;
 
 		}
 	}
+	/**clic sur le bouton si la souris est au bonne endrois
+	 * -retourne true si il y a un clic
+	 * -retourne false sinon
+	 * */
+	public boolean tryClic(int mouseX,int mouseY){
+		System.out.println("("+Integer.toString(mouseX)+","+Integer.toString(mouseY)+")");
+		if(posX<=mouseX && mouseX<=posX+lX){
+			if(posY<=mouseY && mouseY<=posY+lY){
+				actionOnClic();
+				return true;
+			}
+		}
 	
+		return false;
+		
+	}
+	
+	/**Action effectué lors d'un clic sur le bouton*/
+	private void actionOnClic(){
+		InFenDebug.println("Clic sur bouton 1");
+	}
 	
 }

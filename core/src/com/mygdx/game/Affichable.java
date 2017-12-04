@@ -19,10 +19,10 @@ public class Affichable implements Serializable{
 	private static final long serialVersionUID = 1L;
 	//Parametres d'image 
 	protected Texture img;
-	protected int posX;
 	protected int posY;
-	protected int lX;
+	protected int posX;
 	protected int lY;
+	protected int lX;
 	protected int angle;
 	
 	protected Sprite spr;
@@ -31,10 +31,10 @@ public class Affichable implements Serializable{
 	
 	public Affichable(Texture img,int x,int y){
 		this.img=img;
-		this.posX=x;
 		this.posY=y;
-		this.lX=10;
+		this.posX=x;
 		this.lY=10;
+		this.lX=10;
 		this.angle=0;
 		init();
 
@@ -42,10 +42,10 @@ public class Affichable implements Serializable{
 	
 	public Affichable(Texture img,int x,int y,int angle){
 		this.img=img;
-		this.posX=x;
 		this.posY=y;
-		this.lX=10;
+		this.posX=x;
 		this.lY=10;
+		this.lX=10;
 		this.angle=angle;
 		init();
 
@@ -55,10 +55,10 @@ public class Affichable implements Serializable{
 	
 	public Affichable(Texture img,int x,int y,int lX,int lY,int angle){
 		this.img=img;
-		this.posX=x;
 		this.posY=y;
-		this.lX=lX;
+		this.posX=x;
 		this.lY=lY;
+		this.lX=lX;
 		this.angle=angle;
 		init();
 
@@ -76,10 +76,7 @@ public class Affichable implements Serializable{
 	
 	private void createSprite(){
 		spr=new Sprite(img);
-		spr.rotate(angle);
-		spr.setOrigin(lX/2,lY/2);
-		spr.setBounds(posX, posY, lX, lY);
-		spr.setColor(clr);
+		actualizeSprite();
 	}
 	
 	private void actualizeSprite(){
